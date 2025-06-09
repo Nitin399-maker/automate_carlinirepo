@@ -169,7 +169,6 @@ ${classImplementations.join('\n\n')}`;
     }
     async function callLLMAPI(prompt,systemprompt,apiKey) {
         try {
-            console.log(apiKey);
             const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
                 method: 'POST',
                 headers: {
@@ -228,20 +227,20 @@ ${classImplementations.join('\n\n')}`;
         return `
 description: "${description}"
 providers:
-- {id: openrouter:anthropic/claude-3.7-sonnet, config: { max_tokens: 8192 }}
+  - {id: openrouter:anthropic/claude-3.7-sonnet, config: { max_tokens: 8192 }}
 
 defaultTest:
   assert: []
   vars: {}
 
 tests:
- - description: "${description}"
-   vars:
-     prompt: |-
+  - description: "${description}"
+    vars:
+      prompt: |-
        ${question}
-   assert:
-     - type: python
-       value: "file://${testCaseSelect.value}:${function_name[1]}"
+    assert:
+      - type: python
+        value: "file://${testCaseSelect.value}:${function_name[1]}"
 
 # Persist for the web viewer
 writeLatestResults: true
