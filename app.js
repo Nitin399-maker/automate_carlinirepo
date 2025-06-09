@@ -219,7 +219,8 @@ ${classImplementations.join('\n\n')}`;
 
     function generateYAMLConfig(testCase, pythonCode) {
         const descriptionMatch = testCase.match(/DESCRIPTION\s*=\s*"(.+?)"/);
-        const description = descriptionMatch ? descriptionMatch[1] : 'Test case evaluation';
+        let description = descriptionMatch ? descriptionMatch[1] : 'Test case evaluation';
+        description = description.replace(/\\/g, '');
         const function_name = pythonCode.match(/def\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*,\s*context\s*=\s*None\s*\)/);
         console.log('Function name match:', function_name);
         const questionMatch = testCase.match(/question\w*\s*=\s*"""([\s\S]*?)"""/);
