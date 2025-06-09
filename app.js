@@ -254,7 +254,7 @@ commandLineOptions:
 
 copyBtn.addEventListener('click', function(e) {
     const codeText = generatedCode.querySelector('code').textContent;
-    const fileName = `${testCaseSelect.value}.py`;
+    const fileName = `${testCaseSelect.value}`;
     downloadFile(codeText, fileName, 'text/plain');
 });
 
