@@ -1,0 +1,24 @@
+description: "Test if the model can guide a user in a conversation to setup a git repo."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can guide a user in a conversation to setup a git repo."
+    vars:
+      prompt: |-
+        You are in a repository with two files `a` and `b`. Make a new git repo and then commit them both.
+
+        On each round you should just give me just one command to type, I
+    assert:
+      - type: python
+        value: "file://basic_git_setup.py:assert_git_conversation"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

@@ -1,0 +1,23 @@
+description: "Test if the model can generate a SQL query to create a database table."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can generate a SQL query to create a database table."
+    vars:
+      prompt: "I"
+    assert:
+      - type: python
+        value: "file://make_sqlite_table.py:assert_sql_table_creation"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

@@ -1,0 +1,881 @@
+2025-06-09T23:07:25.673Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\debug_broken_code_parcount.py", line 20, in assert_parallel_wordcount_bug_explanation
+    with open(temp_prompt_file, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+2025-06-09T23:07:25.684Z [ERROR]: Error running Python script: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+Stack Trace: Error: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\debug_broken_code_parcount.py", line 20, in assert_parallel_wordcount_bug_explanation
+      with open(temp_prompt_file, "w") as f:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-09T23:07:25.685Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510445420-f67025f2d96c.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510445420-f67025f2d96c.json'
+2025-06-09T23:09:25.004Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\debug_broken_code_parcount.py", line 20, in assert_parallel_wordcount_bug_explanation
+    with open(temp_prompt_file, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+2025-06-09T23:09:25.017Z [ERROR]: Error running Python script: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+Stack Trace: Error: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/eval_prompt.txt'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\debug_broken_code_parcount.py", line 20, in assert_parallel_wordcount_bug_explanation
+      with open(temp_prompt_file, "w") as f:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-09T23:09:25.019Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510564755-307e050bb905c.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510564755-307e050bb905c.json'
+2025-06-09T23:13:43.297Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+    method_to_call = getattr(script_module, method_name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+2025-06-09T23:13:43.307Z [ERROR]: Error running Python script: AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+Stack Trace: Error: AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+      method_to_call = getattr(script_module, method_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-09T23:13:43.309Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510823078-4836adb021e4a.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510823078-4836adb021e4a.json'
+2025-06-09T23:15:51.653Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+    method_to_call = getattr(script_module, method_name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+2025-06-09T23:15:51.661Z [ERROR]: Error running Python script: AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+Stack Trace: Error: AttributeError: module 'debug_innerhtml_eventlistener' has no attribute 'assertion'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+      method_to_call = getattr(script_module, method_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-09T23:15:51.662Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510951462-bf116aec20145.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749510951462-bf116aec20145.json'
+2025-06-09T23:54:16.596Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 71
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+2025-06-09T23:54:16.605Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 71
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-09T23:54:16.605Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749513256420-af79d3fbfa556.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749513256420-af79d3fbfa556.json'
+2025-06-09T23:54:37.123Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 71
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+2025-06-09T23:54:37.134Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 73)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 71
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-09T23:54:37.136Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749513276742-a09bb7d13a15d.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749513276742-a09bb7d13a15d.json'
+2025-06-10T02:27:50.288Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+    method_to_call = getattr(script_module, method_name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'shorten_c_function' has no attribute 'assert_shortened_c_function'
+2025-06-10T02:27:50.300Z [ERROR]: Error running Python script: AttributeError: module 'shorten_c_function' has no attribute 'assert_shortened_c_function'
+Stack Trace: Error: AttributeError: module 'shorten_c_function' has no attribute 'assert_shortened_c_function'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+      method_to_call = getattr(script_module, method_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-10T02:27:50.301Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749522470075-9bf2e513d60b2.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749522470075-9bf2e513d60b2.json'
+2025-06-10T03:27:35.889Z [ERROR]: C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py:20: SyntaxWarning: invalid escape sequence '\['
+  header = """import re
+2025-06-10T03:27:35.953Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 41, in assert_whisper_merge
+    output = run_python_code(full_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 79, in run_python_code
+    os.unlink(f.name)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmp216kbylb.py'
+2025-06-10T03:27:35.964Z [ERROR]: Error running Python script: C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py:20: SyntaxWarning: invalid escape sequence '\['
+  header = """import re
+Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 41, in assert_whisper_merge
+    output = run_python_code(full_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 79, in run_python_code
+    os.unlink(f.name)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmp216kbylb.py'
+
+Stack Trace: Error: C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py:20: SyntaxWarning: invalid escape sequence '\['
+  header = """import re
+Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 41, in assert_whisper_merge
+    output = run_python_code(full_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 79, in run_python_code
+    os.unlink(f.name)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmp216kbylb.py'
+
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:311:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+2025-06-10T03:27:35.965Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526055720-1953db45c4a38.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526055720-1953db45c4a38.json'
+2025-06-10T03:27:55.859Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 41, in assert_whisper_merge
+    output = run_python_code(full_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 79, in run_python_code
+    os.unlink(f.name)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmpvs8hywt9.py'
+2025-06-10T03:27:55.867Z [ERROR]: Error running Python script: PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmpvs8hywt9.py'
+Stack Trace: Error: PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\1\\tmpvs8hywt9.py'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 41, in assert_whisper_merge
+      output = run_python_code(full_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\whisper_merge.py", line 79, in run_python_code
+      os.unlink(f.name)
+2025-06-10T03:27:55.868Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526075629-95cb5bc03fa56.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526075629-95cb5bc03fa56.json'
+2025-06-10T03:38:37.324Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+    formatted_judge_prompt = judge_prompt.format(response)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Single '}' encountered in format string
+2025-06-10T03:38:37.333Z [ERROR]: Error running Python script: ValueError: Single '}' encountered in format string
+Stack Trace: Error: ValueError: Single '}' encountered in format string
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+      formatted_judge_prompt = judge_prompt.format(response)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-10T03:38:37.334Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526717136-aa069a12be1d7.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526717136-aa069a12be1d7.json'
+2025-06-10T03:38:49.964Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+    formatted_judge_prompt = judge_prompt.format(response)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Single '}' encountered in format string
+2025-06-10T03:38:49.972Z [ERROR]: Error running Python script: ValueError: Single '}' encountered in format string
+Stack Trace: Error: ValueError: Single '}' encountered in format string
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+      formatted_judge_prompt = judge_prompt.format(response)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-10T03:38:49.972Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526729783-1d16732141147.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749526729783-1d16732141147.json'
+2025-06-10T03:48:34.073Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+    formatted_judge_prompt = judge_prompt.format(response)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Single '}' encountered in format string
+2025-06-10T03:48:34.088Z [ERROR]: Error running Python script: ValueError: Single '}' encountered in format string
+Stack Trace: Error: ValueError: Single '}' encountered in format string
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\why_broken_flask_extra_brace.py", line 18, in assert_identifies_extra_brace
+      formatted_judge_prompt = judge_prompt.format(response)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-10T03:48:34.089Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749527313872-f8fa426c1240f.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749527313872-f8fa426c1240f.json'
+2025-06-10T03:59:27.299Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+    method_to_call = getattr(script_module, method_name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'bash_list_files_by_size_mod_ten' has no attribute 'get_assert'
+2025-06-10T03:59:27.311Z [ERROR]: Error running Python script: AttributeError: module 'bash_list_files_by_size_mod_ten' has no attribute 'get_assert'
+Stack Trace: Error: AttributeError: module 'bash_list_files_by_size_mod_ten' has no attribute 'get_assert'
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 24, in call_method
+      method_to_call = getattr(script_module, method_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-10T03:59:27.313Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749527967055-67647b4fe2e2c.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\1\promptfoo-python-output-json-1749527967055-67647b4fe2e2c.json'
+2025-06-10T04:04:13.436Z [ERROR]: C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\fix_with_patch.py:9: SyntaxWarning: invalid escape sequence '\d'
+  code = """import re
+2025-06-15T20:22:18.929Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+2025-06-15T20:22:18.931Z [ERROR]: result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\basic_code_understanding.py", line 22, in assert_code_understanding
+    raise ValueError("LLMFOUNDRY_TOKEN environment variable not set")
+ValueError: LLMFOUNDRY_TOKEN environment variable not set
+2025-06-15T20:22:18.936Z [ERROR]: Error running Python script: ValueError: LLMFOUNDRY_TOKEN environment variable not set
+Stack Trace: Error: ValueError: LLMFOUNDRY_TOKEN environment variable not set
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\basic_code_understanding.py", line 22, in assert_code_understanding
+      raise ValueError("LLMFOUNDRY_TOKEN environment variable not set")
+2025-06-15T20:22:18.937Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750018938637-8dfe0e5cfb7b3.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750018938637-8dfe0e5cfb7b3.json'
+2025-06-15T20:22:27.633Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\basic_code_understanding.py", line 22, in assert_code_understanding
+    raise ValueError("LLMFOUNDRY_TOKEN environment variable not set")
+ValueError: LLMFOUNDRY_TOKEN environment variable not set
+2025-06-15T20:22:27.644Z [ERROR]: Error running Python script: ValueError: LLMFOUNDRY_TOKEN environment variable not set
+Stack Trace: Error: ValueError: LLMFOUNDRY_TOKEN environment variable not set
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\basic_code_understanding.py", line 22, in assert_code_understanding
+      raise ValueError("LLMFOUNDRY_TOKEN environment variable not set")
+2025-06-15T20:22:27.645Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750018947406-1adafe8d60e3a.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750018947406-1adafe8d60e3a.json'
+2025-06-15T20:52:37.557Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\c_weird_expression.py", line 24, in assert_correct_c_expression
+    raise Exception("LLMFOUNDRY_TOKEN environment variable not set")
+Exception: LLMFOUNDRY_TOKEN environment variable not set
+2025-06-15T20:52:37.565Z [ERROR]: Error running Python script: Exception: LLMFOUNDRY_TOKEN environment variable not set
+Stack Trace: Error: Exception: LLMFOUNDRY_TOKEN environment variable not set
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\c_weird_expression.py", line 24, in assert_correct_c_expression
+      raise Exception("LLMFOUNDRY_TOKEN environment variable not set")
+2025-06-15T20:52:37.566Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750020757321-ba7a9553fdf0d.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750020757321-ba7a9553fdf0d.json'
+2025-06-15T20:52:45.769Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\c_weird_expression.py", line 24, in assert_correct_c_expression
+    raise Exception("LLMFOUNDRY_TOKEN environment variable not set")
+Exception: LLMFOUNDRY_TOKEN environment variable not set
+2025-06-15T20:52:45.783Z [ERROR]: Error running Python script: Exception: LLMFOUNDRY_TOKEN environment variable not set
+Stack Trace: Error: Exception: LLMFOUNDRY_TOKEN environment variable not set
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\c_weird_expression.py", line 24, in assert_correct_c_expression
+      raise Exception("LLMFOUNDRY_TOKEN environment variable not set")
+2025-06-15T20:52:45.784Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750020765512-2fa3653ef6135.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750020765512-2fa3653ef6135.json'
+2025-06-15T21:59:56.951Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T21:59:56.959Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T21:59:56.960Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024796748-0e0a2a12a0146.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024796748-0e0a2a12a0146.json'
+2025-06-15T22:00:43.458Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:00:43.468Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:00:43.468Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024843234-83de1f8968a13.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024843234-83de1f8968a13.json'
+2025-06-15T22:00:49.537Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:00:49.548Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:00:49.549Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024849287-92c0a280800e2.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024849287-92c0a280800e2.json'
+2025-06-15T22:00:55.657Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:00:55.668Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:00:55.669Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024855423-c320dc00e0d64.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024855423-c320dc00e0d64.json'
+2025-06-15T22:01:30.540Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:01:30.549Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:01:30.550Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024890286-59b06b3539ee9.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024890286-59b06b3539ee9.json'
+2025-06-15T22:01:36.971Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:01:36.983Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:01:36.984Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024896705-b15f27fdf706d.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024896705-b15f27fdf706d.json'
+2025-06-15T22:02:26.198Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:02:26.212Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:02:26.213Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024945869-0dcef8fee830c.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024945869-0dcef8fee830c.json'
+2025-06-15T22:02:32.285Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+    spec.loader.exec_module(script_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+    undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                  ^
+SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+2025-06-15T22:02:32.295Z [ERROR]: Error running Python script: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+Stack Trace: Error: SyntaxError: unterminated triple-quoted f-string literal (detected at line 63)
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 18, in call_method
+      spec.loader.exec_module(script_module)
+    File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+    File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+    File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\emoji_movies.py", line 61
+      undo_prompt = f"""For each of the following ten movies described by 5 emoji, give the movie title that best matches.
+                    ^
+2025-06-15T22:02:32.295Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024952025-4df1153fe8159.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750024952025-4df1153fe8159.json'
+2025-06-16T05:10:07.704Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter.py", line 66, in get_assertion
+    registers = {{'R{i}': 0 for i in range(1, 9)}}
+                     ^
+NameError: name 'i' is not defined. Did you mean: 'id'?
+2025-06-16T05:10:07.716Z [ERROR]: Error running Python script: NameError: name 'i' is not defined. Did you mean: 'id'?
+Stack Trace: Error: NameError: name 'i' is not defined. Did you mean: 'id'?
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter.py", line 66, in get_assertion
+      registers = {{'R{i}': 0 for i in range(1, 9)}}
+                       ^
+2025-06-16T05:10:07.718Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050607247-400a8acb821de.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050607247-400a8acb821de.json'
+2025-06-16T05:11:43.992Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter.py", line 77, in get_assertion
+    """.format(code1, primes_code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: "'R1'"
+2025-06-16T05:11:44.016Z [ERROR]: Error running Python script: KeyError: "'R1'"
+Stack Trace: Error: KeyError: "'R1'"
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter.py", line 77, in get_assertion
+      """.format(code1, primes_code)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-06-16T05:11:44.018Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050703552-31313e46703a3.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050703552-31313e46703a3.json'
+2025-06-16T05:15:39.763Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter_by_example.py", line 75, in check
+    """.format(code, primes)
+        ^^^^^^^^^^^^^^^^^^^^
+KeyError: "'R1'"
+2025-06-16T05:15:39.790Z [ERROR]: Error running Python script: KeyError: "'R1'"
+Stack Trace: Error: KeyError: "'R1'"
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\implement_assembly_interpreter_by_example.py", line 75, in check
+      """.format(code, primes)
+          ^^^^^^^^^^^^^^^^^^^^
+2025-06-16T05:15:39.792Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050939331-3c266e70c2df3.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\6\promptfoo-python-output-json-1750050939331-3c266e70c2df3.json'
+2025-06-16T05:17:08.165Z [ERROR]: Exception in thread Thread-2 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Local\anaconda3\Lib\threading.py", line 1073, in _bootstrap_inner
+2025-06-16T05:17:08.180Z [ERROR]: self.run()
+2025-06-16T05:17:08.183Z [ERROR]: File "C:\Users\e430287.SPI-GLOBAL\AppData\Local\anaconda3\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Local\anaconda3\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 81: invalid start byte

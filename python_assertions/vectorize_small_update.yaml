@@ -1,0 +1,30 @@
+description: "Test if the model can replace a for loop with a vectorized version."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can replace a for loop with a vectorized version."
+    vars:
+      prompt: |-
+        Vectorize this update loop. Call the function `update`:
+
+        import numpy as np
+
+        def update(high, highest_number, delta):
+            for i in range(len(high)):
+                if i != highest_number:
+                    high[i] = min(high[i], high[highest_number] + delta[highest_number] - delta[i])
+            return high
+    assert:
+      - type: python
+        value: "file://vectorize_small_update.py:get_assertion"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

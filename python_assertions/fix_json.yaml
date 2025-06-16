@@ -1,0 +1,25 @@
+description: "Test if the model can fix broken JSON objects."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can fix broken JSON objects."
+    vars:
+      prompt: |-
+        Write me a python function called fix_json that fixes broken JSON objects, and returns the parsed object. I'll pass the JSON object as a string and it should fix:
+        - Incorrect parenthesis, e.g., {"a": (5, 4)} -> {"a": [5, 4]}
+        - Incorrect single quotes, e.g., {'a': 5} -> {"a": 5}
+        - False/True -> false/true
+    assert:
+      - type: python
+        value: "file://fix_json.py:check_fix_json_function"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

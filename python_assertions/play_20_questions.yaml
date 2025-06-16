@@ -1,0 +1,33 @@
+description: "Test if the model is able to ask questions to get to an answer."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config:
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model is able to ask questions to get to an answer."
+    vars:
+      prompt: Let's play 20 questions! I'm thinking of %s. You have 20 questions to guess what it is. Ask me yes or no questions, about anything you want. Do not guess randomly or make overly specific guesses. Do not make your final guess until you are absolutely sure. (You can think out loud first, but your last sentence MUST be a question.)
+
+        Your answer should be of the format
+        [question number]. [internal thought]
+
+        Question :[your question]?
+
+        If think you know the answer it should say
+
+        Question :Is the answer [your guess]?
+        
+    assert:
+      - type: python
+        value: "file://play_20_questions.py:assert_twenty_questions_llama"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

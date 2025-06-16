@@ -1,0 +1,23 @@
+description: "Test if the model can create a tree from a string."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can create a tree from a string."
+    vars:
+      prompt: "No question found"
+    assert:
+      - type: python
+        value: "file://make_tree_from_text.py:assert_tree_creation"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

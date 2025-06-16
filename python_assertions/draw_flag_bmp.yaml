@@ -1,0 +1,23 @@
+description: "Test if the model can write a C program that draws an image. This test requires the ability to understand the .bmp specification, and draw a flag that can be correctly parsed and seen by the evaluator."
+providers:
+  - id: openai:o3
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can write a C program that draws an image. This test requires the ability to understand the .bmp specification, and draw a flag that can be correctly parsed and seen by the evaluator."
+    vars:
+      prompt: "Write me a C program that emits a .bmp that's a depiction of an american flag to stdout."
+    assert:
+      - type: python
+        value: "file://draw_flag_bmp.py:assert_flag_draw_bmp"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

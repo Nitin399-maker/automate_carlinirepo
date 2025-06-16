@@ -1,0 +1,22 @@
+description: "Test if the model can implement a sqrt function."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can implement a sqrt function."
+    vars:
+      prompt: |-
+        Tell me how to compute sqrt() in python without using the sqrt() function, then give me a function to do this. I want the answer as precise as possible. Call the function my_sqrt().
+    assert:
+      - type: python
+        value: "file://program_sqrt.py:assert_sqrt_implementation"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

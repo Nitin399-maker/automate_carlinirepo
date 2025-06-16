@@ -1,0 +1,26 @@
+description: "Test if the model can generate a C++ program that defines dataflow DSL."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can generate a C++ program that defines dataflow DSL."
+    vars:
+      prompt: |-
+        Write a C++ class Const, Square, Print so that I can write, for example,
+
+        Const(5) >> Square() >> Inc() >> Inc() >> Print()
+
+        and the resulting python program will print 27 to the screen.
+    assert:
+      - type: python
+        value: "file://program_pipes_cpp.py:assert_cpp_dataflow_dsl"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

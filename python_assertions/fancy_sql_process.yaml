@@ -1,0 +1,24 @@
+description: "Test if the model can generate a Python program that retrieves data from a SQL file."
+providers:
+  - {id: openrouter:anthropic/claude-3.7-sonnet, config: { max_tokens: 8192 }}
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can generate a Python program that retrieves data from a SQL file."
+    vars:
+      prompt: |-
+        I have a sqlite3 database with the following schema: 
+        CREATE TABLE friends (TEXT favorite_friend, INT age, TEXT profession);
+        Write me a python program that prints out the favorite friend of the youngest person.
+    assert:
+      - type: python
+        value: "file://fancy_sql_process.py:get_assertion"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

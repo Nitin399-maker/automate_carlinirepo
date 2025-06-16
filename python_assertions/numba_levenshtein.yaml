@@ -1,0 +1,22 @@
+description: "Test if the model can generate a numba implementation of the Levenshtein distance algorithm."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can generate a numba implementation of the Levenshtein distance algorithm."
+    vars:
+      prompt: |-
+        Write me a numba implementation of levenshtein distance, taking two numpy int arrays. Call it levenshtein. Run it in nopython mode. Character swaps are cost 2.
+    assert:
+      - type: python
+        value: "file://numba_levenshtein.py:check_numba_levenshtein"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

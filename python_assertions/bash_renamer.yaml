@@ -1,0 +1,24 @@
+description: "Test if the model can write a bash script that renames files with a specific pattern."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can write a bash script that renames files with a specific pattern."
+    vars:
+      prompt: |-
+        Write a bash script to rename all files of the form "*.txt" to "*.bak".
+    assert:
+      - type: python
+        value: "file://bash_renamer.py:assert_bash_renamer"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

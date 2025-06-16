@@ -1,0 +1,24 @@
+description: "Test if a model can write upython code with an obscure module."
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if a model can write upython code with an obscure module."
+    vars:
+      prompt: |-
+        Write a python program that I can use to run on my raspberry pi pico w zero that will check for mqtt messages. 
+    assert:
+      - type: python
+        value: "file://upython_mqtt.py:get_score"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true

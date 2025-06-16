@@ -1,0 +1,24 @@
+description: "Test if the model can generate a basic python program that prints "
+providers:
+  - id: openrouter:anthropic/claude-3.7-sonnet
+    config: 
+      max_tokens: 8192
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if the model can generate a basic python program that prints "
+    vars:
+      prompt: |-
+        Write a python program that prints the string "hello world" and tell me how it works in a sentence
+    assert:
+      - type: python
+        value: "file://print_hello.py:assert_hello_world_program"
+
+# Persist for the web viewer
+writeLatestResults: true
+# Ensure caching stays on
+commandLineOptions:
+  cache: true
