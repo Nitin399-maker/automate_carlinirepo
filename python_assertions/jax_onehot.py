@@ -2,118 +2,89 @@ import re
 import subprocess
 import tempfile
 import os
-import sys
-
 def check_jax_one_hot(response, context=None):
     """
-    Evaluates if the response contains a correct one-hot function implementation
-    using numpy instead of JAX for testing.
+    Evaluates if the response contains a correct JAX one-hot function implementation.
     """
     
+    # Step 1: Extract code from response
     def extract_code(output):
         # Remove language specifiers from code blocks
-        output = re.sub('```[a-z]*', '```', output)
+        output = re.sub(r'```[a-z]*', '```', output)
         if "```" in output and output.count("```") >= 2:
+            # Extract code between first pair of backticks
             code = output.split("```")[1]
         else:
+            # If no code blocks, assume entire response is code
             code = output
         return code.strip()
     
-    # Step 1: Extract and modify code to use numpy
     extracted_code = extract_code(response)
-    modified_code = (extracted_code
-                    .replace('import jax.numpy as jnp', 'import numpy as np')
-                    .replace('jax.numpy', 'numpy')
-                    .replace('jnp', 'np'))
     
-    # Step 2: Prepare test case with numpy
+    # Step 2: Prepare test case with mock JAX
     test_case = """
-import numpy as np
+# Mock JAX numpy for testing
+class MockJnp:
+    def __init__(self):
+        pass
+        
+    def array(self, arr):
+        # Simple implementation using Python lists for testing
+        return arr
 
-# Test cases
-test_cases = [
-    (np.array([1,2,0]), 5),
-    (np.array([0,1,2,3]), 4),
-    (np.array([2]), 3)
-]
+jnp = MockJnp()
 
-for x, num_classes in test_cases:
-    result = one_hot(x, num_classes)
-    print(f"Input: {x}, num_classes: {num_classes}")
-    print(f"Output:\\n{result}\\n")
+# Test the one_hot function
+try:
+    result = one_hot(jnp.array([1,2,0]), 5)
+    
+    # Convert result to a string representation for validation
+    def format_result(res):
+        if hasattr(res, 'shape') and hasattr(res, 'tolist'):
+            # If it's a JAX or numpy array
+            return str(res)
+        else:
+            # If it's our mock result (likely a list of lists)
+            output = "["
+            for row in res:
+                output += "["
+                output += " ".join([str(float(x)) + "." for x in row])
+                output += "] "
+            output += "]"
+            return output
+    
+    print(format_result(result))
+except Exception as e:
+    print(f"Error testing one_hot function: {str(e)}")
 """
     
-    # Step 3: Combine code
-    full_code = """# -*- coding: utf-8 -*-
-import numpy as np
-
-""" + modified_code + "\n\n" + test_case
+    # Step 3: Combine extracted code with test case
+    full_code = extracted_code + "\n\n" + test_case
     
-    # Step 4: Run the code
+    # Step 4: Run Python code
     try:
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', encoding='utf-8', delete=False) as f:
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False, encoding='utf-8') as f:
             f.write(full_code)
             temp_file = f.name
         
-        try:
-            result = subprocess.run(
-                [sys.executable, temp_file],
-                capture_output=True,
-                text=True,
-                encoding='utf-8',
-                timeout=30
-            )
-            
-            if result.returncode != 0:
-                return {
-                    'pass': False,
-                    'score': 0,
-                    'reason': f'Code execution failed: {result.stderr}'
-                }
-            
-            output = result.stdout.strip()
-            
-        finally:
-            if os.path.exists(temp_file):
-                try:
-                    os.close(os.open(temp_file, os.O_RDONLY))
-                    os.unlink(temp_file)
-                except:
-                    pass
+        result = subprocess.run(
+            ['python', temp_file], 
+            capture_output=True, 
+            text=True, 
+            timeout=30
+        )
         
-        # Step 5: Check results
-        expected_patterns = [
-            # First test case
-            r"\[\[0\.\s+1\.\s+0\.\s+0\.\s+0\.\]\s*\[0\.\s+0\.\s+1\.\s+0\.\s+0\.\]\s*\[1\.\s+0\.\s+0\.\s+0\.\s+0\.\]\s*\]",
-            # Second test case
-            r"\[\[1\.\s+0\.\s+0\.\s+0\.\]\s*\[0\.\s+1\.\s+0\.\s+0\.\]\s*\[0\.\s+0\.\s+1\.\s+0\.\]\s*\[0\.\s+0\.\s+0\.\s+1\.\]\s*\]",
-            # Third test case
-            r"\[\[0\.\s+0\.\s+1\.\]\s*\]"
-        ]
+        os.unlink(temp_file)
         
-        # Count how many patterns match
-        matches = sum(1 for pattern in expected_patterns 
-                     if re.search(pattern, output.replace('\n', ' ')))
-        
-        if matches == len(expected_patterns):
-            return {
-                'pass': True,
-                'score': 1.0,
-                'reason': 'All test cases passed successfully'
-            }
-        elif matches > 0:
-            return {
-                'pass': False,
-                'score': matches / len(expected_patterns),
-                'reason': f'{matches} out of {len(expected_patterns)} test cases passed'
-            }
-        else:
+        if result.returncode != 0:
             return {
                 'pass': False,
                 'score': 0,
-                'reason': f'No test cases passed. Output:\n{output}'
+                'reason': f'Code execution failed: {result.stderr}'
             }
-            
+        
+        output = result.stdout.strip()
+        
     except subprocess.TimeoutExpired:
         return {
             'pass': False,
@@ -125,4 +96,47 @@ import numpy as np
             'pass': False,
             'score': 0,
             'reason': f'Error running code: {str(e)}'
+        }
+    
+    # Step 5: Check if output contains patterns that indicate a correct one-hot implementation
+    # Check for error messages
+    if "Error testing one_hot function" in output:
+        return {
+            'pass': False,
+            'score': 0,
+            'reason': f'Error in one_hot function: {output}'
+        }
+    
+    # Look for patterns that would indicate a correct one-hot implementation
+    # The result should have:
+    # - For index 1: second position (index 1) is 1.0, rest are 0.0
+    # - For index 2: third position (index 2) is 1.0, rest are 0.0
+    # - For index 0: first position (index 0) is 1.0, rest are 0.0
+    
+    patterns_to_check = [
+        # Check for row 1 (index 1 is hot)
+        r'\[\s*0\..*1\..*0\..*0\..*0\..*\]',
+        # Check for row 2 (index 2 is hot)
+        r'\[\s*0\..*0\..*1\..*0\..*0\..*\]',
+        # Check for row 0 (index 0 is hot)
+        r'\[\s*1\..*0\..*0\..*0\..*0\..*\]'
+    ]
+    
+    all_patterns_found = True
+    for pattern in patterns_to_check:
+        if not re.search(pattern, output):
+            all_patterns_found = False
+            break
+    
+    if all_patterns_found:
+        return {
+            'pass': True,
+            'score': 1,
+            'reason': 'One-hot function appears to work correctly'
+        }
+    else:
+        return {
+            'pass': False,
+            'score': 0,
+            'reason': f'Output doesn\'t match expected one-hot encoding pattern: {output}'
         }

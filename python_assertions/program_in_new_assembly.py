@@ -3,29 +3,28 @@ import subprocess
 import tempfile
 import os
 
-def assert_assembly_square_numbers(response, context=None):
+def check_assembly_squares(response, context=None):
     """
-    Evaluates if the LLM response contains valid assembly code that generates
-    the first 20 square numbers in memory cells 0-19.
+    Evaluates if the assembly code generates the first 20 square numbers (1, 4, 9, ..., 400)
+    in memory cells 0-19.
     """
     
-    # Extract code from response
     def extract_code(text):
-        text = re.sub('```[a-z]*', '```', text)
+        """Extract code from markdown code blocks or return the text as-is."""
+        # Remove language specifiers from code blocks
+        text = re.sub(r'```[a-z]*', '```', text)
+        
         if "```" in text and text.count("```") >= 2:
-            return text.split("```")[1].strip()
+            # Extract content between first pair of ```
+            parts = text.split("```")
+            if len(parts) >= 3:
+                return parts[1].strip()
+        
+        # Return the whole response if no code blocks found
         return text.strip()
     
-    code = extract_code(response)
-    if not code:
-        return {
-            "pass": False,
-            "score": 0,
-            "reason": "No code found in response"
-        }
-    
-    # Assembly emulator implementation
-    def run_assembly(instructions):
+    def run_assembly_emulator(instructions):
+        """Run the assembly code using a simplified emulator."""
         registers = {"R1": 0, "R2": 0, "R3": 0, "R4": 0, "R5": 0, "R6": 0, "R7": 0, "R8": 0}
         memory = [0] * 100
         instruction_pointer = 0
@@ -51,6 +50,7 @@ def assert_assembly_square_numbers(response, context=None):
             "DIV": lambda a, b: a // b,
             "MOD": lambda a, b: a % b,
         }
+        
         cmp_op = {
             "EQ": lambda a, b: a == b,
             "NEQ": lambda a, b: a != b,
@@ -66,6 +66,7 @@ def assert_assembly_square_numbers(response, context=None):
             if ctr > 1000000:
                 raise Exception("Infinite loop detected")
             
+            # Parse instruction (remove comments and commas)
             parts = instructions_list[instruction_pointer].split("//")[0].replace(",", "").split()
             if len(parts) == 0:
                 instruction_pointer += 1
@@ -95,36 +96,44 @@ def assert_assembly_square_numbers(response, context=None):
             elif instruction == "LOAD":
                 registers[args[0]] = memory[lookup(args[1])]
             elif instruction == "STORE":
-                memory[lookup(args[1])] = lookup(args[0])
+                memory[lookup(args[1])] = registers[args[0]]
             elif instruction == "HCF":
                 break
+            elif instruction.endswith(':'):
+                # Label, just continue
+                pass
             
             instruction_pointer += 1
         
         return memory
     
-    # Run the assembly code
     try:
-        memory = run_assembly(code)
-        expected = [i*i for i in range(1, 21)]
-        actual = memory[:20]
+        # Extract the assembly code from the response
+        code = extract_code(response)
         
-        if actual == expected:
+        # Run the emulator
+        memory = run_assembly_emulator(code)
+        
+        # Check if first 20 memory locations contain square numbers
+        expected_squares = [i*i for i in range(1, 21)]  # [1, 4, 9, 16, ..., 400]
+        actual_values = memory[:20]
+        
+        if actual_values == expected_squares:
             return {
                 "pass": True,
-                "score": 1,
-                "reason": f"Assembly code correctly generated first 20 square numbers: {actual}"
+                "score": 1.0,
+                "reason": "Assembly code correctly generated the first 20 square numbers"
             }
         else:
             return {
                 "pass": False,
-                "score": 0,
-                "reason": f"Expected {expected}, but got {actual}"
+                "score": 0.0,
+                "reason": f"Expected {expected_squares}, but got {actual_values}"
             }
             
     except Exception as e:
         return {
             "pass": False,
-            "score": 0,
-            "reason": f"Assembly execution failed: {str(e)}"
+            "score": 0.0,
+            "reason": f"Error executing assembly code: {str(e)}"
         }

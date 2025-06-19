@@ -1,6 +1,6 @@
 description: "Test if the model can create a tree from a string."
 providers:
-  - id: openrouter:anthropic/claude-3.7-sonnet
+  - id: openai:o3
     config: 
       max_tokens: 8192
 
@@ -11,7 +11,24 @@ defaultTest:
 tests:
   - description: "Test if the model can create a tree from a string."
     vars:
-      prompt: "No question found"
+      prompt: |-
+          class Node:
+          def __init__(self, name, parent=None):
+              self.name = name
+              self.parent = parent
+              self.children = []
+              if parent:
+                  self.parent.children.append(self)
+          def __repr__(self):
+              if self.children == []:
+                  return self.name
+              return '('+self.name + ' ' + ' '.join(repr(c) for c in self.children)+')'
+              Write a complete python file that will print the tree
+
+              (1 (2 (3 4 5 6) (7 8)) (9 10 (11 12)))
+
+              Call the root of the tree 'root'.
+              Then print out str(root).
     assert:
       - type: python
         value: "file://make_tree_from_text.py:assert_tree_creation"

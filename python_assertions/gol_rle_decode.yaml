@@ -1,6 +1,6 @@
 description: "This test case tests if the model can convert a Game of Life pattern represented in RLE format to a numpy array."
 providers:
-  - {id: openai:o3, config: { max_tokens: 8192 } }
+  - {id: openai:o3, config: { max_tokens: 8192 }}
 
 defaultTest:
   assert: []

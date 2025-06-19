@@ -1,0 +1,251 @@
+{
+  "evalId": "eval-l9i-2025-06-18T19:33:58",
+  "results": {
+    "version": 3,
+    "timestamp": "2025-06-18T19:33:58.220Z",
+    "prompts": [
+      {
+        "raw": "{{prompt}}",
+        "label": "{{prompt}}",
+        "id": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "provider": "openai:o3",
+        "metrics": {
+          "score": 0,
+          "testPassCount": 0,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 1,
+          "totalLatencyMs": 131,
+          "tokenUsage": {
+            "total": 376,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "error": "Code execution failed: Traceback (most recent call last):\n  File \"C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\7\\tmp_pib8f22.py\", line 1, in <module>\n    import jax\nModuleNotFoundError: No module named 'jax'\n",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Code execution failed: Traceback (most recent call last):\n  File \"C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\7\\tmp_pib8f22.py\", line 1, in <module>\n    import jax\nModuleNotFoundError: No module named 'jax'\n",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Code execution failed: Traceback (most recent call last):\n  File \"C:\\Users\\E43028~1.SPI\\AppData\\Local\\Temp\\7\\tmp_pib8f22.py\", line 1, in <module>\n    import jax\nModuleNotFoundError: No module named 'jax'\n",
+              "assertion": {
+                "type": "python",
+                "value": "file://jax_onehot.py:check_jax_one_hot"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "eeddce7e-577f-4db2-b34c-707b0c813a82",
+        "latencyMs": 131,
+        "namedScores": {},
+        "prompt": {
+          "raw": "I have a list of indexes and I want to convert it to a one-hot vector using JAX. The function should be jittable and should be named one_hot. It should take two arguments: the first one is the indexes and the second one is the number of possible labels. Just give me the code.",
+          "label": "{{prompt}}"
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:o3",
+          "label": ""
+        },
+        "response": {
+          "output": "```python\nimport jax\nimport jax.numpy as jnp\n\n@jax.jit\ndef one_hot(indices, num_classes):\n    \"\"\"Convert integer indices to one-hot vectors.\n\n    Args:\n        indices: An integer array of shape (…) containing the class indices.\n        num_classes: The total number of classes.\n\n    Returns:\n        A float32 array of shape (…, num_classes) with one-hot encoding.\n    \"\"\"\n    return jax.nn.one_hot(indices, num_classes, dtype=jnp.float32)\n```",
+          "tokenUsage": {
+            "total": 376,
+            "prompt": 0,
+            "completion": 0
+          },
+          "cached": false,
+          "raw": {
+            "id": "resp_684faa311bc4819984627745bfceb87f01848417a2e4ee52",
+            "object": "response",
+            "created_at": 1750051377,
+            "status": "completed",
+            "background": false,
+            "error": null,
+            "incomplete_details": null,
+            "instructions": null,
+            "max_output_tokens": null,
+            "model": "o3-2025-04-16",
+            "output": [
+              {
+                "id": "rs_684faa31a9488199808179298b26149601848417a2e4ee52",
+                "type": "reasoning",
+                "summary": []
+              },
+              {
+                "id": "msg_684faa3476348199a0e101f9cc22bc4201848417a2e4ee52",
+                "type": "message",
+                "status": "completed",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "annotations": [],
+                    "text": "```python\nimport jax\nimport jax.numpy as jnp\n\n@jax.jit\ndef one_hot(indices, num_classes):\n    \"\"\"Convert integer indices to one-hot vectors.\n\n    Args:\n        indices: An integer array of shape (…) containing the class indices.\n        num_classes: The total number of classes.\n\n    Returns:\n        A float32 array of shape (…, num_classes) with one-hot encoding.\n    \"\"\"\n    return jax.nn.one_hot(indices, num_classes, dtype=jnp.float32)\n```"
+                  }
+                ],
+                "role": "assistant"
+              }
+            ],
+            "parallel_tool_calls": true,
+            "previous_response_id": null,
+            "reasoning": {
+              "effort": "medium",
+              "summary": null
+            },
+            "service_tier": "default",
+            "store": true,
+            "temperature": 1,
+            "text": {
+              "format": {
+                "type": "text"
+              }
+            },
+            "tool_choice": "auto",
+            "tools": [],
+            "top_p": 1,
+            "truncation": "disabled",
+            "usage": {
+              "input_tokens": 70,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens": 306,
+              "output_tokens_details": {
+                "reasoning_tokens": 192
+              },
+              "total_tokens": 376
+            },
+            "user": null,
+            "metadata": {}
+          }
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "description": "Test if the model can correctly convert a list of indexes to a one-hot vector in Python using JAX.",
+          "vars": {
+            "prompt": "I have a list of indexes and I want to convert it to a one-hot vector using JAX. The function should be jittable and should be named one_hot. It should take two arguments: the first one is the indexes and the second one is the number of possible labels. Just give me the code."
+          },
+          "assert": [
+            {
+              "type": "python",
+              "value": "file://jax_onehot.py:check_jax_one_hot"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "prompt": "I have a list of indexes and I want to convert it to a one-hot vector using JAX. The function should be jittable and should be named one_hot. It should take two arguments: the first one is the indexes and the second one is the number of possible labels. Just give me the code."
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      }
+    ],
+    "stats": {
+      "successes": 0,
+      "failures": 1,
+      "errors": 0,
+      "tokenUsage": {
+        "cached": 0,
+        "completion": 0,
+        "prompt": 0,
+        "total": 376,
+        "numRequests": 1,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0
+        }
+      }
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Test if the model can correctly convert a list of indexes to a one-hot vector in Python using JAX.",
+    "prompts": [
+      "{{prompt}}"
+    ],
+    "providers": [
+      {
+        "id": "openai:o3",
+        "config": {
+          "max_tokens": 8192
+        }
+      }
+    ],
+    "tests": [
+      {
+        "description": "Test if the model can correctly convert a list of indexes to a one-hot vector in Python using JAX.",
+        "vars": {
+          "prompt": "I have a list of indexes and I want to convert it to a one-hot vector using JAX. The function should be jittable and should be named one_hot. It should take two arguments: the first one is the indexes and the second one is the number of possible labels. Just give me the code."
+        },
+        "assert": [
+          {
+            "type": "python",
+            "value": "file://jax_onehot.py:check_jax_one_hot"
+          }
+        ]
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "sharing": true,
+    "defaultTest": {
+      "assert": [],
+      "vars": {},
+      "options": {},
+      "metadata": {}
+    },
+    "outputPath": [
+      "output/result.json"
+    ],
+    "extensions": [],
+    "metadata": {}
+  },
+  "shareableUrl": null
+}

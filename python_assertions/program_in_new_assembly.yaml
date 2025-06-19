@@ -1,6 +1,6 @@
 description: "Test if the model can write a program in a new assembly language. This ability to learn a new language on-the-fly is important for many tasks."
 providers:
-  - id: openrouter:anthropic/claude-3.7-sonnet
+  - id: openai:o3
     config: 
       max_tokens: 8192
 
@@ -41,7 +41,7 @@ tests:
         Given this assembly language, write a program that {}
     assert:
       - type: python
-        value: "file://program_in_new_assembly.py:assert_assembly_square_numbers"
+        value: "file://program_in_new_assembly.py:check_assembly_squares"
 
 writeLatestResults: true
 commandLineOptions:

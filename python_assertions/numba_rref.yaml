@@ -1,0 +1,71 @@
+description: "Test if a model can rewrite a fairly complex Python function to Numba."
+providers:
+  - {id: openai:o3, config: { max_tokens: 8192 }}
+
+defaultTest:
+  assert: []
+  vars: {}
+
+tests:
+  - description: "Test if a model can rewrite a fairly complex Python function to Numba."
+    vars:
+      prompt: |-
+        Rewrite this function to use numba and nopython mode. You can assume that the input is a 2d matrix correctly formatted. Call it rref still.
+
+        def rref(matrix, graphlen):
+            PH = 16
+
+            extra = 0
+            col = 0
+            pivots = []
+
+            used_for_row = [set([i]) for i in range(matrix.shape[0])]
+
+            matrix = matrix % PH
+            while col + extra < matrix.shape[1] - 1 and col < matrix.shape[0]:
+
+                if matrix[col, col + extra] == 0:
+                    if np.all(matrix[:, col] == 0):
+                        extra += 1
+                        continue
+                    other = np.argwhere(matrix[:, col + extra] != 0).flatten()[-1]
+                    if other < col:
+                        extra += 1
+                        continue
+
+                matrix[col], matrix[other] = list(matrix[other]), list(matrix[col])
+                used_for_row[col], used_for_row[other] = used_for_row[other], used_for_row[col]
+
+                pivots.append(col + extra)
+                pivot = matrix[col, col + extra]
+                if col + extra < graphlen:
+                    assert np.abs(pivot) == 1 or np.abs(pivot) == PH - 1
+                else:
+                    assert np.abs(pivot) == 2 or np.abs(pivot) == PH - 2
+                pivot //= 2
+                matrix[col] *= pivot
+                matrix[col] %= PH
+
+                others = np.argwhere(matrix[:, col + extra]).flatten()
+
+                for i in others:
+                    if i == col: continue
+                    used_for_row[i] |= used_for_row[col]
+                    if col < graphlen:
+                        matrix[i] -= matrix[col] * matrix[i, col + extra]
+                    else:
+                        while matrix[i, col + extra] != 0:
+                            matrix[i] = (matrix[i] - matrix[col]) % PH
+                    matrix[i] %= PH
+
+                col += 1
+
+            matrix = np.array(matrix) % PH
+            return [sorted(x) for x in used_for_row]
+    assert:
+      - type: python
+        value: "file://numba_rref.py:check_numba_rref"
+
+writeLatestResults: true
+commandLineOptions:
+  cache: true

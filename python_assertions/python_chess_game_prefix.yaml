@@ -1,6 +1,6 @@
 description: "Test if the model can correctly call a python API for a moderately popular python library."
 providers:
-  - id: openrouter:anthropic/claude-3.7-sonnet
+  - id: openai:o3
     config: 
       max_tokens: 8192
 
@@ -19,7 +19,7 @@ tests:
         Call your function print_all_prefixes(game). Do not give example code for how to run it.
     assert:
       - type: python
-        value: "file://python_chess_game_prefix.py:get_assertion"
+        value: "file://python_chess_game_prefix.py:check_response"
 
 writeLatestResults: true
 commandLineOptions:

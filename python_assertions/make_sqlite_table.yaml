@@ -1,8 +1,7 @@
+
 description: "Test if the model can generate a SQL query to create a database table."
 providers:
-  - id: openrouter:anthropic/claude-3.7-sonnet
-    config: 
-      max_tokens: 8192
+  - {id: openai:o3, config: { max_tokens: 8192} }
 
 defaultTest:
   assert: []
@@ -11,7 +10,8 @@ defaultTest:
 tests:
   - description: "Test if the model can generate a SQL query to create a database table."
     vars:
-      prompt: "I"
+      prompt: |-
+        I'm working with a sqlite3 database. Write a query that creates a new database with a table for peoples name, job, and age. Then add a researcher named Nicholas who is 5. Write this directly as a sql query that I can pipe into sqlite3. Do not give the 'sqlite' command, I'll just do `sqlite3 database.db < [your output]`.
     assert:
       - type: python
         value: "file://make_sqlite_table.py:assert_sql_table_creation"

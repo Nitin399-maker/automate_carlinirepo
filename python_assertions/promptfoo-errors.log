@@ -879,3 +879,38 @@ Traceback (most recent call last):
                   ^^^^^^^^^
   File "<frozen codecs>", line 322, in decode
 UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 81: invalid start byte
+2025-06-18T19:38:43.088Z [ERROR]: Traceback (most recent call last):
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+    result = call_method(script_path, method_name, *data)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+    return method_to_call(*args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\jax_onehot.py", line 18, in check_jax_one_hot
+    extracted_code = extract_code(response)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\jax_onehot.py", line 9, in extract_code
+    output = re.sub(r'```[a-z]*', '```', output)
+             ^^
+NameError: name 're' is not defined. Did you forget to import 're'?
+2025-06-18T19:38:43.090Z [ERROR]: Error running Python script: NameError: name 're' is not defined. Did you forget to import 're'?
+Stack Trace: Error: NameError: name 're' is not defined. Did you forget to import 're'?
+    at PythonShell.parseError (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:303:21)
+    at terminateIfNeeded (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:193:32)
+    at ChildProcess.<anonymous> (C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\node_modules\python-shell\index.js:185:13)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+    --Python Traceback: --
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 39, in <module>
+      result = call_method(script_path, method_name, *data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\AppData\Roaming\npm\node_modules\promptfoo\dist\src\python\wrapper.py", line 28, in call_method
+      return method_to_call(*args)
+             ^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\jax_onehot.py", line 18, in check_jax_one_hot
+      extracted_code = extract_code(response)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\e430287.SPI-GLOBAL\Documents\automate_testcases_mine\python_assertions\jax_onehot.py", line 9, in extract_code
+      output = re.sub(r'```[a-z]*', '```', output)
+               ^^
+2025-06-18T19:38:43.091Z [ERROR]: Error removing C:\Users\E43028~1.SPI\AppData\Local\Temp\7\promptfoo-python-output-json-1750275522894-2b816b47274cf.json: Error: ENOENT: no such file or directory, unlink 'C:\Users\E43028~1.SPI\AppData\Local\Temp\7\promptfoo-python-output-json-1750275522894-2b816b47274cf.json'

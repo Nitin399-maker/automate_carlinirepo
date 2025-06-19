@@ -1,21 +1,21 @@
-import subprocess
 import tempfile
 import os
 import re
+import sys
+from io import StringIO
+from contextlib import redirect_stdout
 
-def assert_traceback_fix(response, context=None):
+def assert_python_traceback_fix(response, context=None):
     """
-    Evaluates if the model can fix a Python traceback handling program.
-    Expects the response to contain fixed code that outputs "x: 5" and "y: 6".
+    Evaluates if the LLM response correctly fixes the Python traceback program.
+    Expected to find "x: 5" and "y: 6" in the output.
     """
     
-    # Extract code from response (similar to ExtractCode)
-    def extract_code(output):
-        # Remove language specifiers from code blocks
+    def extract_code(output, keep_main=True):
+        """Extract code from response, handling code blocks"""
         output = re.sub('```[a-z]*', '```', output)
-        
         if "```" in output and output.count("```") >= 2:
-            # Extract code between first pair of triple backticks
+            # Extract code between first pair of ```
             parts = output.split("```")
             if len(parts) >= 3:
                 return parts[1].strip()
@@ -23,71 +23,37 @@ def assert_traceback_fix(response, context=None):
         # If no code blocks found, assume entire response is code
         return output.strip()
     
-    try:
-        # Extract the code
-        code = extract_code(response)
-        
-        if not code:
-            return {
-                'pass': False,
-                'score': 0,
-                'reason': 'No code found in response'
-            }
-        
-        # Create temporary file
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
-            f.write(code)
-            temp_file = f.name
-        
+    def run_python_code(code):
+        """Run Python code using exec() and return output"""
         try:
-            # Run the Python code
-            result = subprocess.run(
-                ['python', temp_file],
-                capture_output=True,
-                text=True,
-                timeout=10
-            )
-            
-            output = result.stdout
-            
-            # Check if both required substrings are present
-            has_x_5 = "x: 5" in output
-            has_y_6 = "y: 6" in output
-            
-            success = has_x_5 and has_y_6
-            
-            if success:
-                return {
-                    'pass': True,
-                    'score': 1,
-                    'reason': 'Code successfully fixed and outputs correct variables'
-                }
-            else:
-                missing = []
-                if not has_x_5:
-                    missing.append("x: 5")
-                if not has_y_6:
-                    missing.append("y: 6")
-                
-                return {
-                    'pass': False,
-                    'score': 0,
-                    'reason': f'Missing expected output: {", ".join(missing)}. Got: {repr(output)}'
-                }
-                
-        finally:
-            # Clean up temporary file
-            os.unlink(temp_file)
-            
-    except subprocess.TimeoutExpired:
-        return {
-            'pass': False,
-            'score': 0,
-            'reason': 'Code execution timed out'
-        }
-    except Exception as e:
-        return {
-            'pass': False,
-            'score': 0,
-            'reason': f'Error executing code: {str(e)}'
-        }
+            # Redirect stdout to capture print statements
+            output = StringIO()
+            with redirect_stdout(output):
+                # Use exec() to run the code
+                exec(code, globals())
+            return output.getvalue()
+        except Exception as e:
+            return f"Error: {str(e)}"
+    
+    def check_substring(output, substr):
+        """Check if substring exists in output"""
+        return substr in output
+    
+    # Extract code from the LLM response
+    extracted_code = extract_code(response, keep_main=True)
+    
+    # Run the extracted code
+    execution_output = run_python_code(extracted_code)
+    
+    # Check for both required substrings
+    has_x_5 = check_substring(execution_output, "x: 5")
+    has_y_6 = check_substring(execution_output, "y: 6")
+    
+    # Both conditions must be true
+    success = has_x_5 and has_y_6
+    
+    return {
+        'pass': success,
+        'score': 1.0 if success else 0.0,
+        'reason': f"Execution output: {execution_output[:200]}... | Found 'x: 5': {has_x_5}, Found 'y: 6': {has_y_6}"
+    }
